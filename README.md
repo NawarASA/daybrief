@@ -3,6 +3,8 @@
 [![CI](https://github.com/NawarASA/daybrief/actions/workflows/ci.yml/badge.svg)](https://github.com/NawarASA/daybrief/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+**THIS IS STILL A PROTOTYPE, IT WILL IMPROVE**
+
 **An LLM agent that turns your calendar, email, weather, and to-dos into one actionable morning
 briefing.**
 
