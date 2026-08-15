@@ -1,0 +1,261 @@
+:root {
+  --bg: #faf6f0;
+  --bg-elevated: #ffffff;
+  --text: #1c1a17;
+  --text-muted: #6b6357;
+  --border: #e8e0d4;
+  --accent: #c65d1e;
+  --accent-strong: #a3480f;
+  --terminal-bg: #1c1a17;
+  --terminal-text: #f3ede2;
+  --terminal-muted: #a89f8f;
+  --terminal-accent: #f2a341;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14120f;
+    --bg-elevated: #1c1a17;
+    --text: #f3ede2;
+    --text-muted: #a89f8f;
+    --border: #332d24;
+    --accent: #f2a341;
+    --accent-strong: #f7bb6e;
+    --terminal-bg: #0e0d0b;
+    --terminal-text: #f3ede2;
+    --terminal-muted: #8a8175;
+    --terminal-accent: #f2a341;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--accent);
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 88px;
+  padding-bottom: 64px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 20px;
+}
+
+.lede {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 0 0 28px;
+}
+
+.secondary-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.secondary-link:hover {
+  text-decoration: underline;
+}
+
+/* Install command */
+
+.install-command {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  border-radius: 10px;
+  padding: 14px 16px;
+  max-width: fit-content;
+}
+
+.install-command code {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.install-command button {
+  flex-shrink: 0;
+  background: var(--terminal-accent);
+  color: #1c1a17;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.install-command button:hover {
+  filter: brightness(1.08);
+}
+
+/* How it works */
+
+.steps {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.steps h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Demo preview */
+
+.section-lede {
+  color: var(--text-muted);
+  margin-top: -8px;
+}
+
+.terminal {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  border-radius: 12px;
+  padding: 24px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Support CTA */
+
+.support {
+  text-align: center;
+}
+
+.support p {
+  color: var(--text-muted);
+  max-width: 50ch;
+  margin: 8px auto 24px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: var(--accent-strong);
+}
+
+/* Footer */
+
+.footer {
+  padding: 32px 0 56px;
+}
+
+.footer .container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
